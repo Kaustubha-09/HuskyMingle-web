@@ -15,7 +15,7 @@ interface PostCardProps {
 
 export function PostCard({ post, onLikeChange }: PostCardProps) {
   const { user } = useAuthStore();
-  const [liked, setLiked] = useState(post.reactions?.length > 0);
+  const [liked, setLiked] = useState((post.reactions?.length ?? 0) > 0);
   const [likeCount, setLikeCount] = useState(post.likeCount || 0);
 
   const handleLike = async () => {
