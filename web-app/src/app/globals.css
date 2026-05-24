@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #8B0000;
+  --secondary: #FFD700;
+}
+
+* { box-sizing: border-box; }
+
+body { margin: 0; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #8B0000; border-radius: 3px; }
+
+/* Smooth transitions */
+* { transition: background-color 0.2s, border-color 0.2s; }
