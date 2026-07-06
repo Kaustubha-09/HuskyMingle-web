@@ -323,17 +323,6 @@ Offset pagination drifts when new posts are inserted between pages. Cursor pagin
 - [ ] Sentry error tracking integration
 - [ ] Infinite scroll with cursor pagination (backend wired, frontend pending)
 
----
-
-## Resume Bullets
-
-- Built a full-stack campus social network with **Next.js 15 App Router**, **NestJS 10**, **PostgreSQL**, and **Redis**, covering 20 authenticated feature surfaces
-- Implemented JWT access-token refresh with Axios interceptors — silently rotates tokens and retries the original request, with no user-facing interruption
-- Designed a **Socket.io** real-time layer with Redis pub/sub adapter, supporting chat, presence, and notifications across horizontally-scalable backend instances
-- Architected **Zustand + React Query** separation: server cache in React Query, auth/UI state in Zustand with `localStorage` persistence and SSR-safe hydration
-
----
-
 ## Interview Talking Points
 
 **Auth hydration across page loads** — The main layout calls `getState().user` (not the reactive hook) inside `useEffect` to read Zustand state after `localStorage` has hydrated, avoiding a flash-to-login on every navigation.
