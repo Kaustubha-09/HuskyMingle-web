@@ -323,16 +323,6 @@ Offset pagination drifts when new posts are inserted between pages. Cursor pagin
 - [ ] Sentry error tracking integration
 - [ ] Infinite scroll with cursor pagination (backend wired, frontend pending)
 
-## Interview Talking Points
-
-**Auth hydration across page loads** — The main layout calls `getState().user` (not the reactive hook) inside `useEffect` to read Zustand state after `localStorage` has hydrated, avoiding a flash-to-login on every navigation.
-
-**Scaling Socket.io** — The Redis adapter is already wired. Horizontal scaling is one load-balancer config away. The next step is a BullMQ queue on Redis to decouple message delivery from the HTTP request cycle.
-
-**Cursor pagination vs. offset** — Cursor pagination is stable under concurrent inserts (social feeds write constantly). Offset shifts as new rows are added, causing duplicates or gaps in page N+1.
-
-**Three-tier translation** — GPT-4o-mini for quality, Google Translate for fallback, mock for offline/CI. Each tier has the same interface; switching is a config change, not a code change.
-
 ---
 
 *Part of the [HuskyMingle](https://github.com/Kaustubha-09/HuskyMingle) cross-platform project · Built by Kaustubha Eluri*
